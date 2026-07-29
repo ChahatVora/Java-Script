@@ -8,7 +8,7 @@ let d = Boolean(c)
 // console.log(typeof d);
 // console.log(d);
 
-let e = null
+let e = 33
 let f = String(e)
 console.log(typeof f);
 console.log(f);
