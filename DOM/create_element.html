@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to crete element using js</title>
+</head>
+<body>
+    <script>
+        const div = document.createElement("div")
+        // div.innerText = "chahat vora"
+        div.className = "cdiv"
+        div.id = "idiv"
+        div.setAttribute("title","chahat vora")
+        div.style.color = "black"
+        div.style.padding = "10px"
+        div.style.backgroundColor = "pink"
+        const childnode = document.createTextNode("chahat vora")
+        div.appendChild(childnode)
+        console.log(div);
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>

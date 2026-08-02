@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>how to modify element</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="fruit">mango</div>
+      <div class="fruit">banana</div>
+      <div class="fruit">pinepal</div>
+      <div class="fruit">stoberry</div>
+    </div>
+    <script>
+      const hold = document.querySelector(".parent");
+      // console.log(hold);
+      // console.log(hold.children);
+      // console.log(hold.children[0].innerText);
+
+      for (let i = 0; i < hold.children.length; i++) {
+        // console.log(hold.children[i].innerHTML);
+      }
+      const f = document.querySelector(".fruit");
+      // console.log(f.parentElement);
+    //   console.log(f.nextElementSibling);
+      
+      // hold.children[0].style.color = "red"
+    //   console.log(hold.firstElementChild);
+    //   console.log(hold.lastElementChild);
+
+    console.log(hold.childNodes);
+    
+
+
+
+    </script>
+  </body>
+</html>
