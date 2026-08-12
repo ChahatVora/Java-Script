@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project one</title>
+    <style>
+      .color {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+      }
+      .main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #red{
+        background-color: red;
+      }
+      #green{
+        background-color: green;
+      }
+      #blue{
+        background-color: blue;
+      }
+      #yellow{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>color changing</h1>
+    <div class="main">
+      <div class="color" id="red"></div>
+      <div class="color" id="green"></div>
+      <div class="color" id="blue"></div>
+      <div class="color" id="yellow"></div>
+    </div>
+
+    <script>
+        const colors = document.querySelectorAll(".color")
+        const body = document.querySelector("body")
+        colors.forEach(function(color){
+            // console.log(color);
+            color.addEventListener('click',function(e){
+                console.log(e);
+                console.log(e.target);
+                if(e.target.id === "red"){
+                    body.style.backgroundColor = e.target.id
+                }
+                else if(e.target.id === "green"){
+                    body.style.backgroundColor = e.target.id
+                }
+                else if(e.target.id === "blue"){
+                    body.style.backgroundColor = e.target.id
+                }
+                else if(e.target.id === "yellow"){
+                    body.style.backgroundColor = e.target.id
+                }
+
+            });
+        });
+    </script>
+  </body>
+</html>
