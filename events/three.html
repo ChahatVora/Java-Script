@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>settimeout and setinterval</title>
+  </head>
+  <body>
+    <h1>vr chahat</h1>
+    <button id="b1">start</button>
+
+    <script>
+      let s1;
+      const start = function(){
+          console.log(new Date().toLocaleTimeString([],{
+              hour:"2-digit",
+              minute:"2-digit",
+              second:"2-digit",
+              hour12: true
+          }));
+
+      }
+      
+      document.querySelector('#b1').addEventListener("click",function(){
+          s1 = setTimeout(start,1000)
+      })
+      
+      
+    </script>
+  </body>
+</html>
