@@ -18,3 +18,9 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism
+
+
+for this  when in js then global execution is window object.
+but when node js envrionment then this for global execution is empty.
+
+when you use new keyword then constructor is automatically called.
