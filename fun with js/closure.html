@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lexical scoping and closure</title>
+  </head>
+  <body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    // in lexical scoping inner function can access outer function properties means variable and at all
+    //outer function or brother of function cannot access properties.
+    function user1() {
+      let name = "chahat";
+
+      function user2() {
+        console.log(name);
+      }
+      user2();
+    }
+    user1();
+
+    function user3() {
+      let name = "het";
+      function user4() {
+        console.log(name);
+      }
+      return user4;
+    }
+    const user = user3();
+    user();
+    // here when you return inner function then it also return lexical scope of outer 
+    // function because there is attechment of outer function variable with inner function.
+  </script>
+  // practical usecase of closure
+  <script>
+    // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+  </script>
+</html>
